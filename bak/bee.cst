@@ -8,20 +8,7 @@
   <Multicolour>False</Multicolour>
   <Uppercase>True</Uppercase>
   <character>
-    <charcode>0</charcode>
-    <chardata>
-      <data>8</data>
-      <data>28</data>
-      <data>28</data>
-      <data>99</data>
-      <data>127</data>
-      <data>34</data>
-      <data>62</data>
-      <data>8</data>
-    </chardata>
-  </character>
-  <character>
-    <charcode>1</charcode>
+    <charcode>28</charcode>
     <chardata>
       <data>195</data>
       <data>255</data>
@@ -34,7 +21,7 @@
     </chardata>
   </character>
   <character>
-    <charcode>2</charcode>
+    <charcode>29</charcode>
     <chardata>
       <data>8</data>
       <data>28</data>
@@ -47,7 +34,7 @@
     </chardata>
   </character>
   <character>
-    <charcode>3</charcode>
+    <charcode>30</charcode>
     <chardata>
       <data>0</data>
       <data>24</data>
@@ -57,6 +44,110 @@
       <data>126</data>
       <data>66</data>
       <data>90</data>
+    </chardata>
+  </character>
+  <character>
+    <charcode>33</charcode>
+    <chardata>
+      <data>8</data>
+      <data>28</data>
+      <data>28</data>
+      <data>99</data>
+      <data>127</data>
+      <data>34</data>
+      <data>62</data>
+      <data>8</data>
+    </chardata>
+  </character>
+  <character>
+    <charcode>34</charcode>
+    <chardata>
+      <data>0</data>
+      <data>1</data>
+      <data>110</data>
+      <data>118</data>
+      <data>42</data>
+      <data>52</data>
+      <data>94</data>
+      <data>102</data>
+    </chardata>
+  </character>
+  <character>
+    <charcode>35</charcode>
+    <chardata>
+      <data>0</data>
+      <data>24</data>
+      <data>120</data>
+      <data>86</data>
+      <data>215</data>
+      <data>86</data>
+      <data>120</data>
+      <data>24</data>
+    </chardata>
+  </character>
+  <character>
+    <charcode>36</charcode>
+    <chardata>
+      <data>0</data>
+      <data>204</data>
+      <data>188</data>
+      <data>104</data>
+      <data>84</data>
+      <data>236</data>
+      <data>220</data>
+      <data>2</data>
+    </chardata>
+  </character>
+  <character>
+    <charcode>37</charcode>
+    <chardata>
+      <data>8</data>
+      <data>62</data>
+      <data>34</data>
+      <data>127</data>
+      <data>99</data>
+      <data>28</data>
+      <data>28</data>
+      <data>8</data>
+    </chardata>
+  </character>
+  <character>
+    <charcode>38</charcode>
+    <chardata>
+      <data>102</data>
+      <data>122</data>
+      <data>44</data>
+      <data>84</data>
+      <data>110</data>
+      <data>118</data>
+      <data>128</data>
+      <data>0</data>
+    </chardata>
+  </character>
+  <character>
+    <charcode>39</charcode>
+    <chardata>
+      <data>24</data>
+      <data>30</data>
+      <data>106</data>
+      <data>235</data>
+      <data>106</data>
+      <data>30</data>
+      <data>24</data>
+      <data>0</data>
+    </chardata>
+  </character>
+  <character>
+    <charcode>40</charcode>
+    <chardata>
+      <data>64</data>
+      <data>59</data>
+      <data>55</data>
+      <data>42</data>
+      <data>22</data>
+      <data>61</data>
+      <data>51</data>
+      <data>0</data>
     </chardata>
   </character>
 </charset>

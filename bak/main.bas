@@ -1,42 +1,91 @@
-10 rem Better Bee Ready
-11 rem Save memory for icons
-12 poke 52,28: poke 56,28: clr
-13 gosub 200 
-15 dim sd(7)
-18 dim cd(7)
-20 let hv = 7680
-30 let bh = 3
-40 let fc = 4
-50 let fi = 2
-60 let hc = 2 : let bc=7
-70 let ch = 38400
-80 let sz=505
-90 let bp = 7681 : let lp=bp
-100 let bi=0
-117 rem Compass Directions
-118 gosub 240 : gosub 540
-120 print chr$(147)
-125 rem Draw Hive
-130 gosub 1000
-131 rem Draw Flowers
-140 gosub 1050
-143 rem Calculate position of bee
-145 gosub 310
-146 rem Bee Sniff
-147 gosub 360
-148 rem Draw Bee
-149 gosub 600
-150 get a$: if a$="" then goto 143
-160 print chr$(147)
-165 poke 36869,240
-170 end
-200 rem copy the chr set
-210 for i=7168 TO 7679: poke i,peek(i+25600): next
-230 return
-240 rem set up the characters
-250 for i=0 to 31:read z:poke 7168+i,z:next:poke 36869,255
-252 return
-260 data 8,28,28,99,127,34,62,8
-265 data 195,255,90,126,102,90,60,0
-270 data 8,28,42,119,42,8,8,28
-275 data 0,24,60,102,66,126,66,90
+10remBBR
+20pO52,28:pO56,28:cL:goS320:pO36879,221:dEfnrn(a)=int(rN(1)*a)
+40dIsd(7):dIcd(7):hv=7680:bh=43:fc=4:fi=42:hc=2:bc=7:si=32:pp=3
+50ch=38400:sz=483:dIbi(7):bp=7681:lp=hv:rw=0:cl=1:tg=0:lr=5:lf=0:uc=0:ui=41
+70goS350:goS590:goS1030:?cH(147):goS430:goS520
+90remhve
+100goS380:goS620
+110pr=lr:lr=1:goS700:lr=pr
+120remlk
+130iftg=0tHgoS700
+140remrnd
+150iftg=0tHgoS550
+160goS960
+170fd=dr:ld=7:s=1
+180fOi=fdtoldstEs:c=pE(bp+sd(i))
+200if(tg=hvaN(c=bhorc=si))or(tg<>hvaN(c=siorc=fi))tHdr=i:gO230:nEi
+220fd=dr:ld=0:s=-1:gO180
+230ifdr>=0aNdr<=7tHbp=bp+sd(dr):ifbp<>lptHgoS620
+250gEa$:ifa$<>""tHgO290
+260ifbp=tgtHtg=0:ifbp=hvtHgoS940:gO90
+280if(nf>0)aN(pp>0)tHgO110
+290?cH(147):pO36869,240:pO36879,27:eN
+320remcp
+330fOi=7168to7679:pOi,pE(i+25600):nEi:reT
+350remch
+360fOi=0to87:rEz:pO7432+i,z:nEi:pO36869,255
+370reT
+380remhv
+390tg=lf:pOhv,bh:pOch,hc:reT
+430remflw
+440nf=fnrn(11)+5:fOro=1tonf:fp=int(rN(0)*sz)+1:pOhv+fp,fi:pOch+fp,fc
+490nEro:reT
+510rempos
+520ifbp<hvorbp>hv+sztHbp=hv+1
+530rw=int((bp-hv)/22):cl=bp-(hv+(rw*22)):reT
+550remrnd
+560rd=fnrn(7):ifsd(rd)=0orbp+sd(rd)>hv+szorbp+sd(rd)=hvtHgO560
+580tg=bp+sd(rd):reT
+590remdrs
+600fOi=0to7:rEcd(i):nEi:reT
+620remb
+630ifpE(bp)=fitHtg=hv:goS920:ifpE(bp)=uitHpp=pp-1
+640iflp<>hvtHpOlp,si
+650ifbp<>hvtHpObp,bi(dr):pOch+(bp-hv),bc:lp=bp
+680goS510:v=36874:f=128:goS1065:reT
+700remlk
+710fOd=0to7
+720fOi=bptobp+(cd(d)*lr)stEcd(d)
+730ifi<hv-1ori>hv+sztH830
+740tr=int((i-hv)/22):tc=i-(hv+(tr*22))
+750ifd>0aNd<4aNtc<cltH830
+760ifd<=7aNd>4aNtc>cltH830
+770ifpE(i)=fitHtg=i:iflr>1tHreT
+780ifbp=iorlr=1tHgO810
+790oc=pE(i):os=pE(ch+(i-hv)):pOi,46:pOch+(i-hv),3
+800fOx=0to5:nEx:pOi,oc:pOch+(i-hv),os
+810nEi
+820sd(d)=cd(d):gO840
+830iflr=1tHsd(d)=0
+840nEd:reT
+860remmg
+870?"{down*20}":fOx=len(mg$)to20:mg$=mg$+cH(si):nEx
+890?leF(mg$,20);:?"{home}":reT
+920lf=bp:nf=nf-1:pp=pp+1:lr=lr+(pp-3):goS1060:mg$="pp "+l$:goS860:goS1069
+930reT
+940tg=lf:goS960:pOhv+up,si:reT
+960remdr
+970tr=int((tg-hv)/22):tc=tg-(hv+(tr*22)):dr=aB((tr<rw)aN(tc=cl))*0
+980dr=dr+aB((tr<rw)aN(tc>cl))*1:dr=dr+aB((tr=rw)aN(tc>cl))*2
+990dr=dr+aB((tr>rw)aN(tc>cl))*3:dr=dr+aB((tr>rw)aN(tc=cl))*4
+1000dr=dr+aB((tr>rw)aN(tc<cl))*5:dr=dr+aB((tr=rw)aN(tc<cl))*6
+1010dr=dr+aB((tr<rw)aN(tc<cl))*7:reT
+1030remdi
+1040fOi=0to7:rEbi(i):nEi:reT
+1060l$="{green}":fOx=1topp:l$=l$+"*":nE:l$=l$+"{blue}":reT
+1065rembz
+1068pO36878,15:pOv,f:fOx=1to100:nE:pO36878,0:reT
+1069up=int(rN(0)*sz)+1:pOhv+up,ui:pOch+((hv+up)-hv),uc:reT
+1200dA8,28,28,99,127,34,62,8
+1210dA,1,110,118,42,52,94,102
+1220dA,24,120,86,215,86,120,24
+1230dA,204,188,104,84,236,220,2
+1240dA8,62,34,127,99,28,28,8
+1250dA102,122,44,84,110,118,128,
+1260dA24,30,106,235,106,30,24,
+1270dA64,59,55,42,22,61,51,
+1280dA195,255,90,126,102,90,60,
+1290dA8,28,42,119,42,8,8,28
+1300dA,24,60,102,66,126,66,90
+1310dA-22,-21,1,23,22,21,-1,-23
+1320dA33,34,35,36,37,38,39,40
